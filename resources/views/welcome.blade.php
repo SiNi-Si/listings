@@ -21,16 +21,24 @@
             <p class="fw-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacus elit, posuere ac
                 mollis vel, lacinia ac erat. Phasellus quis tempus lacus. Nam lacus lectus, commodo a enim vel, finibus
                 fringilla quam.</p>
-            <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus tristique bibendum magna sed
-                gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a turpis in orci pulvinar
-                lobortis. Vestibulum placerat, lectus non vestibulum luctus, erat nibh tempus sapien, ut hendrerit diam
-                est malesuada magna. Ut sodales sit amet augue ut consequat. Aenean sagittis non dolor eu pulvinar.
-                Nulla facilisi. Proin tempus luctus velit, id feugiat nibh. Maecenas ornare lectus ac lacus gravida
-                congue.</p>
-            <p class="mb-0">Aenean posuere luctus nulla quis dignissim. Vestibulum facilisis a lectus sit amet consectetur. Nam
-                semper commodo massa, eu gravida neque blandit eget. Sed porta eleifend nunc, quis scelerisque nisi
-                iaculis non. Ut a sagittis ipsum. Donec nibh ex, pretium eu diam eu, convallis vehicula dui. In placerat
-                enim ac justo tristique, id fermentum velit tristique. Sed eget ex leo.</p>
+            <div class="card-body">
+                <form method="POST" action="{{ url('/Save') }}" id="myForm">
+                    @csrf
+                    <div class="row">
+                        <div class="col-auto py-2">
+                            <label for="contact_name">First Name<span style="color: #db524b;  font-size: 13pt;"> *</span></label>
+                        </div>
+                        <div class="col-md-4 py-2">
+                            <div class="form-group">
+                                <input id="contact_name" type="text" class="form-control @error('contact_name') is-invalid @enderror" name="contact_name" value="{{ old('contact_name') }}" placeholder="Name" autofocus required>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-2">
+                            <input class="btn btn-primary"  type="submit" id="submit_button" value="Submit" />
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
