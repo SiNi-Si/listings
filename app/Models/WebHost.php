@@ -9,4 +9,7 @@ class WebHost extends Model{
     protected $connection = "tec_nut_host";
     protected $table = "web_host";
 
+    public function Company() {
+        return $this->hasOne(Company::class);
+    }
 }

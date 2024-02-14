@@ -18,11 +18,13 @@
 <div class="container-fluid">
     <div class="row">
         <div class="order-1 order-lg-2 col-lg-6 p-5 fs-5">
-            <p class="fw-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacus elit, posuere ac
-                mollis vel, lacinia ac erat. Phasellus quis tempus lacus. Nam lacus lectus, commodo a enim vel, finibus
-                fringilla quam.</p>
+            <p class="fw-bold"></p>
             <div class="card-body">
-                
+                @foreach($WebHosts as $WebHost)
+                    <div class="col-12">
+                        {{$WebHost->domain1}}
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
