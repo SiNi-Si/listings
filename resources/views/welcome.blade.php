@@ -20,11 +20,18 @@
         <div class="order-1 order-lg-2 col-lg-6 p-5 fs-5">
             <p class="fw-bold"></p>
             <div class="card-body">
-                @foreach($WebHosts as $WebHost)
-                    <div class="col-12">
-                        {{$WebHost->domain1}}
-                    </div>
-                @endforeach
+                <div class="row">
+                    @foreach($Businesses as $Biz)
+                        @if($Biz->link != 'NONE')
+                        <div class="col-6">
+                            <h5>{{$Biz->name}}</h5>
+                        </div>
+                        <div class="col-6">
+                            <h5><a href="https://{{$Biz->link}}" target="_blank">{{$Biz->link}}</a> 
+                        </div>
+                        @endif
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>
