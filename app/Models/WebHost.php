@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class WebHost extends Model{
 
-    protected $connection = "tec_nut_host";
+    //protected $connection = "tec_nut_host";
     protected $table = "web_host";
 
     /*
