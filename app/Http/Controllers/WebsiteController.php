@@ -13,7 +13,10 @@ class WebsiteController extends Controller{
 
     public function index(){
         $Company = 'Tec-Nut';
-        $WebHosts = WebHost::with('Company')->all();
+        $WebHosts = WebHost::all();
+        foreach ($WebHosts as $Hosts) {
+            // code...
+        }
         //dd($WebHosts);
         return view('welcome', compact('Company', 'WebHosts')); 
     }
