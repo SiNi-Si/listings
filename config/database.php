@@ -63,6 +63,15 @@ return [
             ]) : [],
         ],
 
+        'tec_nut_host' => [
+            'driver'    => env('DB_CONNECTION_HOST'),
+            'host'      => env('DB_HOST_HOST'),
+            'port'      => env('DB_PORT_HOST'),
+            'database'  => env('DB_DATABASE_HOST'),
+            'username'  => env('DB_USERNAME_HOST'),
+            'password'  => env('DB_PASSWORD_HOST'),
+        ],
+        
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
