@@ -14,5 +14,8 @@ use App\Http\Controllers\WebsiteController;
 |
 */
 
-Route::get('/', [WebsiteController::class, 'index'])->middleware(['Middleware']);
-Route::post('/Save', [WebsiteController::class, 'form']);
+Route::get('/', [WebsiteController::class, 'index']);
+
+
+Route::get('/sitemap.xml', [WebsiteController::class, 'sitemap']);
+Route::get('/Sitemap.xml', [WebsiteController::class, 'sitemap']);

@@ -27,18 +27,9 @@ class WebsiteController extends Controller{
         return view('welcome', compact('Company', 'Businesses')); 
     }
 
-    public function form(Request $request){
-        dd($request);
-
-        return redirect(url('/User/Settings'));
-    }
-
-    public function ajax(Request $request){
-        $isAvailable = true; // or false
-
-        echo json_encode(array(
-            'valid' => $isAvailable,
-        ));
+    public function sitemap(){
+        $WebSite = 'https:///';
+        return response()->view('sitemap_single', compact('WebSite'))->header('Content-Type', 'text/xml');
     }
 
 }
