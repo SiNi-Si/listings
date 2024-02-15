@@ -29,7 +29,7 @@ class WebsiteController extends Controller{
 
     public function sitemap(){
         $WebSite = 'https:///';
-        return response()->view('sitemap_single', compact('WebSite'))->header('Content-Type', 'text/xml');
+        return response()->view('sitemap', compact('WebSite'))->header('Content-Type', 'text/xml');
     }
 
 }
